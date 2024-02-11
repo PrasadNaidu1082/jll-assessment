@@ -12,41 +12,41 @@ steps:
     terraformVersion: 'latest'
 
 
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
-    backendServiceArm: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
-    backendAzureRmResourceGroupName: 'Prasad-testrg'
-    backendAzureRmStorageAccountName: 'jllprodstorageacc'
-    backendAzureRmContainerName: 'terracont'
-    backendAzureRmKey: 'terracount/terraform.tfstate'
-
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'validate'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
-  
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
-    environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
-
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
-    environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
-
+# - task: TerraformTaskV4@4
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'init'
+#     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+#     backendServiceArm: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
+#     backendAzureRmResourceGroupName: 'Prasad-testrg'
+#     backendAzureRmStorageAccountName: 'jllprodstorageacc'
+#     backendAzureRmContainerName: 'terracont'
+#     backendAzureRmKey: 'terracount/terraform.tfstate'
 
 # - task: TerraformTaskV4@4
 #   inputs:
 #     provider: 'azurerm'
-#     command: 'destroy'
+#     command: 'validate'
+#     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+  
+# - task: TerraformTaskV4@4
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'plan'
 #     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
 #     environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
+
+# - task: TerraformTaskV4@4
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'apply'
+#     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+#     environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
+
+
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+    environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
