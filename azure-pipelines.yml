@@ -49,4 +49,5 @@ steps:
     provider: 'azurerm'
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+    commandOptions: '-auto-approve'
     environmentServiceNameAzureRM: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
