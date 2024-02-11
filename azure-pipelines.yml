@@ -13,21 +13,21 @@ steps:
 
 
 # - task: TerraformTaskV4@4
-#   inputs:
-#     provider: 'azurerm'
-#     command: 'init'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
-#     backendServiceArm: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
-#     backendAzureRmResourceGroupName: 'Prasad-testrg'
-#     backendAzureRmStorageAccountName: 'jllprodstorageacc'
-#     backendAzureRmContainerName: 'terracont'
-#     backendAzureRmKey: 'terracount/terraform.tfstate'
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+    backendServiceArm: 'Azure subscription 1(9a23f0d6-0e0b-4fc9-ab3f-885dcd4f92f5)'
+    backendAzureRmResourceGroupName: 'Prasad-testrg'
+    backendAzureRmStorageAccountName: 'jllprodstorageacc'
+    backendAzureRmContainerName: 'terracont'
+    backendAzureRmKey: 'terracount/terraform.tfstate'
 
-# - task: TerraformTaskV4@4
-#   inputs:
-#     provider: 'azurerm'
-#     command: 'validate'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/infrastructure/'
   
 # - task: TerraformTaskV4@4
 #   inputs:
