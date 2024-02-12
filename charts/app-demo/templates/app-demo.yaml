@@ -5,7 +5,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: app-project 
   source:
     repoURL: https://dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
     path: charts/app-demo/
