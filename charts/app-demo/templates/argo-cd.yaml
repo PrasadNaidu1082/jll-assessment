@@ -7,7 +7,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://prasadnaidu10820520@dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
+    repoURL: https://dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
     path: charts/app-demo/templates
     targetRevision: main
   destination:
