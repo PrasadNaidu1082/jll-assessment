@@ -8,7 +8,7 @@ spec:
   project: project-demo 
   source:
     repoURL: https://dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
-    path: app-demo/
+    path: argocd/app-demo/
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
