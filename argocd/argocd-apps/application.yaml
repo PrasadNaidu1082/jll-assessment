@@ -8,11 +8,13 @@ spec:
   project: project-demo 
   source:
     repoURL: https://dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
-    path: config
+    path: app-demo/
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
     automated:
       selfHeal: false
