@@ -8,11 +8,11 @@ spec:
   project: default
   source:
     repoURL: https://prasadnaidu10820520@dev.azure.com/prasadnaidu10820520/Prasad-Pruefung/_git/jll-challenge
-    path: charts/argo-cd
+    path: charts/app-demo/templates
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:
-      selfHeal: true
+      selfHeal: false
